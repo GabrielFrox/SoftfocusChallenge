@@ -2,10 +2,11 @@ import json
 import string
 from pymongo import MongoClient
 
+# Environment variables its a better choice to sensible data like this
+# fortunately this time, security not is an issue
 client = MongoClient('mongodb://localhost:27017/')
 db = client.proagro_facil
 beneficiary_collection = db.beneficiaries
-
 
 # Just a helper
 def check_existence_by_cpf(cpf: string):

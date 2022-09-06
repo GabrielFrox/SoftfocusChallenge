@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt &&\
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 3001
-
-CMD "something" && "should be here"
+EXPOSE 5000
