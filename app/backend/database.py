@@ -12,6 +12,7 @@ def check_existence_by_cpf(cpf: string):
     result = beneficiary_collection.find_one({"cpf": cpf})
     return True if result else False
 
+
 # Recover every beneficiary from collection
 def get_beneficiaries():
     result = beneficiary_collection.find({}, {"_id": False})
@@ -25,7 +26,10 @@ def create_beneficiary(person_data: json):
         return "CPF já cadastrado!"
     else:
         new_beneficiary = beneficiary_collection.insert_one(person_data)
-        return f'Beneficiário cadastrado com sucesso! ID: {new_beneficiary.inserted_id}'
+        return (
+            'Beneficiário cadastrado com sucesso! ID:'
+            f'{new_beneficiary.inserted_id}'
+        )
 
 
 # Update one beneficiary information after check his existence
