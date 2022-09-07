@@ -5,6 +5,7 @@ from pymongo import MongoClient
 # Environment variables its a better choice to sensible data like this
 # fortunately this time, security not is an issue
 client = MongoClient(host='db', port=27017)
+# client = MongoClient('mongodb://localhost/27017')
 db = client.proagro_facil
 beneficiary_collection = db.beneficiaries
 

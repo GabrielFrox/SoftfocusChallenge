@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import database
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET'])
 def landing_page_content():
     result = database.get_beneficiaries()
-    return result
+    return jsonify(result)
 
 
 @app.route("/create", methods=["POST"])
