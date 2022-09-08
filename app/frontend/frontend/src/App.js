@@ -1,12 +1,17 @@
 import './App.css';
 import Header from './components/Header';
-import MainContent from './components/MainContent';
+import BeneficiariesPage from './pages/BeneficiariesPage';
+import RegisterPage from './pages/RegisterPage';
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <MainContent />
+      <Routes>
+        <Route exact path='/' element={ <RegisterPage /> } />
+        <Route path='/beneficiaries' element={ <BeneficiariesPage /> } />
+      </Routes>
     </div>
   );
 }
