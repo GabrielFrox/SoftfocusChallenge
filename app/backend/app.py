@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import database
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/", methods=['GET'])
@@ -32,4 +34,4 @@ def delete_beneficiary():
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
