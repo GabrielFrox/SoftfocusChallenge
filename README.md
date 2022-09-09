@@ -27,8 +27,18 @@ obs: Recomendo usar um ambiente virtual para instalação das libs
 
 Após o pip isntall execute o comando `Flask run` ou ainda `python app.py`, o backend já deve ficar disponível em `http://localhost:5000/`.
 
+## Tecnologias utilizadas:
+ - Pymongo
+ - Flask
+ - flask-cors
+
 ### Frontend:
 Para o frontend dê um `npm install` no terminal em ./frontend/frontend e acabada a instalação use o comando `npm start`, o front end ficará disponível em `http://localhost:3000/`.
+
+## Tecnologias utilizadas:
+ - React
+ - React-router-dom
+ - Axios
 
 ### 👀 Observações:
 
