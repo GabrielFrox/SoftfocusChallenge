@@ -5,7 +5,7 @@ Esse projeto se trata de uma aplicação fullstack completa, do banco de dados a
 # Como rodar o projeto
 ### ⚠️ O projeto pode ser rodado com um único comando no docker caso você deseje ⚠️
 
-Use o comando `docker-compose up -d` na pasta raiz do projeto (onde o arquivo `docker-compose.yml` se encontra) para iniciar a aplicação por inteira.
+Use o comando `docker-compose up -d` na pasta app do projeto (onde o arquivo `docker-compose.yml` se encontra) para iniciar a aplicação por inteira.
 
 Seguem as portas de cada um dos serviços:
 
@@ -34,4 +34,4 @@ No header das páginas no front existe um botão `Popular banco de dados`, clica
 
 ## Não acaba por aqui
 
-Melhorias ainda serão feitas no projeto, em principal uma refatoração e uma estilização com StyledComponents
+Melhorias ainda serão feitas no projeto, em principal uma refatoração e uma estilização com StyledComponents.
