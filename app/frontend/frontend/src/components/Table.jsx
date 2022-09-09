@@ -107,7 +107,7 @@ export default function Table({ data }) {
             { filterOn ? tableContent(filtered) : tableContent(currData) }
           </tbody>
         </table>
-        { update.update && <UpdateForm data={update.data} /> }
+        { update.update && <UpdateForm data={update.data} upHandler={setUpdate} /> }
       </>
     )
 }

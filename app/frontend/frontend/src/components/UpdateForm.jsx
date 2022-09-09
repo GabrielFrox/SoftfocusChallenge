@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React, { useState } from 'react';
 import { updateBeneficiary } from '../services/axios';
 
-export default function UpdateForm({ data }) {
+export default function UpdateForm({ data, upHandler }) {
     const [field, setField] = useState('');
     const [newData, setNewData] = useState('');
 
@@ -59,6 +59,7 @@ export default function UpdateForm({ data }) {
         const newObj = { ...data, field: newData };
         const result = await updateBeneficiary(newObj);
         window.alert(result.data);
+        upHandler(false)
     }
 
     return (
@@ -81,5 +82,6 @@ export default function UpdateForm({ data }) {
     )
 }
 UpdateForm.propTypes = {
-    data: PropTypes.any
+    data: PropTypes.any,
+    upHandler: PropTypes.any
 }
