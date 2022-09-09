@@ -17,25 +17,25 @@ Seguem as portas de cada um dos serviços:
 
 # Caso não queira usar a versão Dockerizada
 
-### Banco de dados:
+## Banco de dados:
 O banco de dados é criado via Docker, então ao menos para o DB ele se torna obrigatório.
 
-### Backend:
+## Backend:
 O backend pode ser iniciado com o comando `pip install -r requirements.txt` no terminal dentro da pasta backend.
 
 obs: Recomendo usar um ambiente virtual para instalação das libs
 
 Após o pip isntall execute o comando `Flask run` ou ainda `python app.py`, o backend já deve ficar disponível em `http://localhost:5000/`.
 
-## Tecnologias utilizadas:
+### Tecnologias utilizadas:
  - Pymongo
  - Flask
  - flask-cors
 
-### Frontend:
+## Frontend:
 Para o frontend dê um `npm install` no terminal em ./frontend/frontend e acabada a instalação use o comando `npm start`, o front end ficará disponível em `http://localhost:3000/`.
 
-## Tecnologias utilizadas:
+### Tecnologias utilizadas:
  - React
  - React-router-dom
  - Axios
