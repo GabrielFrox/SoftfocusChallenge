@@ -10,7 +10,9 @@ Use o comando `docker-compose up -d` na pasta app do projeto (onde o arquivo `do
 Seguem as portas de cada um dos serviços:
 
 `Frontend: http://localhost:3000/`
+
 `Backend: http://localhost:5000/`
+
 `MongoDB: http://localhost:27017/`
 
 # Caso não queira usar a versão Dockerizada
