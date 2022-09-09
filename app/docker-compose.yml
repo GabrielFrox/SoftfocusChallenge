@@ -11,10 +11,19 @@ services:
   backend:
     build: ./backend
     container_name: backend
-    # restart: always
     ports: 
      - 5000:5000
     depends_on:
      - db
     links:
      - db
+
+  frontend:
+    build: ./frontend/frontend
+    container_name: frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+    links:
+      - backend
