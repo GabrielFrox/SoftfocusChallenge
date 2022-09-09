@@ -1,10 +1,10 @@
+from crypt import methods
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import database
 
 app = Flask(__name__)
 CORS(app)
-
 
 @app.route("/", methods=['GET'])
 def landing_page_content():
@@ -32,6 +32,10 @@ def delete_beneficiary():
     result = database.delete_beneficiary(payload["cpf"])
     return result
 
+@app.route('/dev/populate', methods=['GET'])
+def populate_db():
+    result = database.populate_db()
+    return result
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

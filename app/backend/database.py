@@ -4,6 +4,9 @@ from pymongo import MongoClient
 
 # Environment variables its a better choice to sensible data like this
 # fortunately this time, security not is an issue
+# =====================================================
+# Just in case of someone that not want to use Docker,
+# comment line 11 and uncomment line 10
 # client = MongoClient('mongodb://localhost/27017')
 client = MongoClient(host='db', port=27017)
 db = client.proagro_facil
@@ -14,6 +17,13 @@ beneficiary_collection = db.beneficiaries
 def check_existence_by_cpf(cpf: string):
     result = beneficiary_collection.find_one({"cpf": cpf})
     return True if result else False
+
+# Populate the DB for development use
+def populate_db():
+    with open('db_dev_data.py') as file:
+        content = file.read()
+        beneficiary_collection.insert_many(json.loads(content))
+        return 'Banco de dados populado com sucesso!'
 
 
 # Recover every beneficiary from collection

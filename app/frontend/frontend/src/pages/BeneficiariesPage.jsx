@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { getBeneficiaries } from '../services/axios'
+import Table from '../components/Table';
 
 export default function MainContent() {
-  const [beneficiaries, setBeneficiaries] = useState();
-  const [loading, setLoading] = useState(true)
-  // const []
+  const [beneficiaries, setBeneficiaries] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const EMPTY_DB_MESSAGE = 'Nenhum beneficiário cadastrado';
   
 
   // Fetch all data from beneficiaries in API when page is mounted
@@ -20,15 +21,7 @@ export default function MainContent() {
     return (
       <>
         <h1>Beneficiários</h1>
-        <section>
-          <label htmlFor="">
-            Busque por CPF(Apenas números):
-            <input
-              type="text"
-              placeholder='ex: 1234567'
-            />
-          </label>
-        </section>
+        { beneficiaries.length < 1 ? <h2>{ EMPTY_DB_MESSAGE }</h2> : <Table data={beneficiaries} /> }
       </>
     )
   }
